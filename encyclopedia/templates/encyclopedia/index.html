@@ -1,0 +1,24 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block form %}	<!--Search bar form-->
+	<form action="wiki/title" method="get">
+       	{% csrf_token %}
+        {{ search_entry_bar }} <!--Django form from index def in views-->
+        <input type="submit" value="Search">
+    </form>
+{% endblock %}
+
+{% block body %} <!--Displays a list of all entries-->
+    <h1>All Pages</h1>
+
+    <ul>
+        {% for entry in entries %}
+            <li><a href="wiki/{{ entry }}">{{ entry }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

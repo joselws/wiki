@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{{ title }}</title>
+	</head>
+		
+	<body>
+		<h3>We couldn't find {{ title }} in our list of pages, don't you mean:</h3>
+		{% for match in matches %}	<!--Display a list of links for all matches-->
+			<ul>
+				<li><a href="{{ match }}">{{ match }}</a></li>
+			</ul>
+		{% endfor %}
+		<a href="../">Go to main page</a>
+	</body>
+</html>

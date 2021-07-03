@@ -1,0 +1,21 @@
+<!--error page displayed in case the title entry doesn't exist
+the variable 'title', which holds the title name of the page is
+passed into this html file-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Missing title</title>
+	</head>
+	
+	<body>
+		<h1>Error!</h1>
+		<p>The entry page by the name of "{{ title }}" couldn't
+		be found. Please, check if the name is correctly spelled
+		or if the file does exist.</p>
+		
+		<!--Home page is the parent directory with no additional characters
+		in its url-->
+		<a href="../">Go to main page</a>
+	</body>
+</html>

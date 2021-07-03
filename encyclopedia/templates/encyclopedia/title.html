@@ -1,0 +1,16 @@
+<!--We have passed into this page 2 variables,
+'title' which holds the name of the entry page, and
+'content' which is the content of that entry itself-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{{ title }}</title>
+	</head>
+	
+	<body>
+		{{ content|safe }}
+		<a href="{{title}}/edit">Edit</a><br />
+		<a href="../">Go to main page</a>
+	</body>
+</html>

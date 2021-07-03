@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Collision error</title>
+	</head>
+	
+	<body>
+		<h1>Collision Error!</h1>
+		<p>The page with the title "{{ title }}" already exists. <br /> 
+		Store it with another name or delete the page.</p><br />
+		<a href="{% url 'new' %}">Try a new page</a><br />
+		<a href="{% url 'index' %}">Go to main page</a>
+	</body>
+</html>

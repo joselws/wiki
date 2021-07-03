@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Edit {{title}}</title>
+	</head>
+	
+	<body>
+		<h1>Edit {{title}}</h1>
+		<form action="../{{title}}/edit" method="POST">
+			{% csrf_token %}
+			{{ edit_form.non_field_errors }}
+			<div>	<!--content form section-->
+				{{ edit_form.content_form.errors}}
+				{{ edit_form.content_form.label_tag}}<br />
+				{{ edit_form.content_form }}
+			</div>
+			
+			<input type="submit" value="Edit">
+		</form>
+		
+		<a href="../{{title}}">Return to {{title}}</a><br />
+		<a href="{% url 'index' %}">Discard and go to main page</a>
+	</body>
+</html>
